@@ -8,7 +8,8 @@ import java.net.http.HttpResponse
 class Input {
     companion object {
         fun getFor(year: Int, day: Int): String {
-            val localFile = File(String.format("./src/days/day%02d/input.txt", day))
+            val testPostfix = System.getProperty("testpostfix", "")
+            val localFile = File(String.format("./src/days/day%02d/input%s.txt", day, testPostfix))
             if (localFile.exists()) {
                 return localFile.readText()
             }
