@@ -1,10 +1,11 @@
 package adventofcode
 
-import adventofcode.y2021.Day09
+import adventofcode.y2021.Day10
+
 
 fun main() {
-    val todayNum = 9
-    val today = Day09()
+    val todayNum = 10
+    val today = Day10()
     println(today.runPartOneWith(Input.forDate(2021, todayNum)))
     println(today.runPartTwoWith(Input.forDate(2021, todayNum)))
 }
