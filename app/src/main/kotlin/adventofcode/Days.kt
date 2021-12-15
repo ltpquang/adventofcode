@@ -1,4 +1,4 @@
-package adventofcode.days
+package adventofcode
 
 abstract class Days {
     abstract fun runPartOneWith(input: String): String

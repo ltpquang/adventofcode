@@ -3,5 +3,6 @@
  */
 package adventofcode
 
-fun main(args: Array<String>) {
+
+fun main() {
 }
