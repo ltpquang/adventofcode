@@ -27,3 +27,9 @@ build/
 *.iml
 !**/testData/**/*.iml
 /adventcookie
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
