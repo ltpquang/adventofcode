@@ -3,18 +3,22 @@ package adventofcode.matrix
 typealias Location = Pair<Int, Int>
 
 typealias IntMap = Array<Array<Int>>
+
 operator fun IntMap.get(loc: Location): Int {
     return get(loc.row())[loc.col()]
 }
+
 operator fun IntMap.set(loc: Location, value: Int) {
     this[loc.row()][loc.col()] = value
 }
 
 
 typealias BooleanMap = Array<Array<Boolean>>
+
 operator fun BooleanMap.get(loc: Location): Boolean {
     return get(loc.row())[loc.col()]
 }
+
 operator fun BooleanMap.set(loc: Location, value: Boolean) {
     this[loc.row()][loc.col()] = value
 }
@@ -30,6 +34,12 @@ fun generateBooleanMap(mapSize: Pair<Int, Int>): BooleanMap {
 
 fun BooleanMap.countTrue(): Int {
     return flatMap { it.asList() }.count { it }
+}
+
+fun BooleanMap.stringify(on: Char, off: Char, sep: String): String {
+    return this.joinToString("\n") { row ->
+        row.map { col -> if (col) on else off }.joinToString(sep)
+    }
 }
 
 fun getSize(map: Array<Array<Int>>): Pair<Int, Int> {
